@@ -14,12 +14,12 @@ def single_particle(t):
 		x += random.choice((-1,1))
 	return np.array(positions)
 
-def simulate(n_gen, n_part, func):
+def simulate(n_gen, n_part):
 
 	sim = []
 	for particle in range(n_part):
-		sim.append(single_particle(n_gen, func))
-		sim = np.array(sim)
+		sim.append(single_particle(n_gen))
+	sim = np.array(sim)
 	return sim
 
 def plot_table(sim):
